@@ -22,12 +22,12 @@ WidgetLED appledr(V10);
 WidgetLED appledg(V11); 
 WidgetLED appledy(V12); 
 
-// 🛠 Đồng bộ dữ liệu từ Blynk ngay khi thiết bị kết nối
+
 BLYNK_CONNECTED() {
   Blynk.syncVirtual(V2, V3, V4, V9);
 }
 
-// 🛠 Đọc cảm biến và gửi dữ liệu lên Blynk
+// Đọc cảm biến và gửi dữ liệu lên Blynk
 void sendSensorData() {
   analogVal = analogRead(analogPin);
   phantram = map(analogVal, 0, 1023, 100, 0);
